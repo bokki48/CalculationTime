@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textColor="@color/black"
+
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutInputTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTV"
+        app:layout_constraintVertical_bias="0.1">
+
+        <EditText
+            android:id="@+id/firstInputET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/hintTime"
+            android:background="@drawable/stroke_rectangle"/>
+
+
+        <EditText
+            android:id="@+id/secondInputET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="@string/hintTime"
+            android:background="@drawable/stroke_rectangle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutInputTime"
+        app:layout_constraintVertical_bias="0.1">
+
+        <Button
+            android:id="@+id/buttonSumBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:text="@string/plus"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:strokeWidth="3dp"
+            app:cornerRadius="7dp"
+            app:strokeColor="@color/blue"
+            android:backgroundTint="@color/white" />
+
+        <Button
+            android:id="@+id/buttonDifferenceBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:text="@string/minus"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:strokeWidth="3dp"
+            app:cornerRadius="7dp"
+            app:strokeColor="@color/blue"
+            android:backgroundTint="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultTimeTV"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="@string/resultTime"
+        android:textSize="22sp"
+        android:background="@drawable/stroke_rectangle_circular"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutButtons"
+        app:layout_constraintVertical_bias="0.1" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
